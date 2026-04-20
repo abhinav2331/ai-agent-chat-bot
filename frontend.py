@@ -1,6 +1,6 @@
 # if you dont use pipenv uncomment the following:
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 
 #Step1: Setup UI with streamlit (model provider, model, system prompt, web_search, query)
@@ -12,7 +12,7 @@ st.write("Create and Interact with the AI Agents!")
 
 system_prompt=st.text_area("Define your AI Agent: ", height=70, placeholder="Type your system prompt here...")
 
-MODEL_NAMES_GROQ = ["llama-3.3-70b-versatile", "mixtral-8x7b-32768"]
+MODEL_NAMES_GROQ = ["llama-3.3-70b-versatile"]
 MODEL_NAMES_OPENAI = ["gpt-4o-mini"]
 
 provider=st.radio("Select Provider:", ("Groq", "OpenAI"))
